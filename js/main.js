@@ -10,6 +10,7 @@ for (let i = 0; i < lists.length; i++) {
     }
     lists[i].classList.add('active');
     sections[i].classList.remove('d-none');
+    window.scrollTo(0, 0);
   })
 }
 
