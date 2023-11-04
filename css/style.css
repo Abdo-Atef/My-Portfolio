@@ -148,8 +148,8 @@ main{
 /* -------------------- SideBar ------------------------- */
 .sideBar img{
   border-radius: 5%;
-  width: 150px;
-  
+  max-width: 150px;
+  width: 100%;
   margin: 0 auto;
 }
 @media (max-width:1200px) {
@@ -194,7 +194,7 @@ main{
   color: var(--text-gold);
 }
 aside{
-  transition: .5s;
+  transition: .6s;
 }
 @media (max-width:1200px) { 
   aside{
@@ -220,7 +220,18 @@ aside{
     position: relative !important;
   }
   aside.active{
-    max-height: 487px !important;
+    max-height: 600px !important;
+  }
+}
+@media (max-width:767px) { 
+  .sideBar > section .my-info h1{
+    font-size: 16px;
+  }
+  .sideBar > section .my-info p{
+    font-size: 14px;
+  }
+  .sideBar .showContactsToggle{
+    font-size: 12px;
   }
 }
 /* -------------------- Main Section -------------------- */
