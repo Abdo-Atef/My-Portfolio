@@ -349,35 +349,36 @@ aside{
   display: block;
 }
 /* --------------------- Portfolio ------------------------ */
-.portfolio .row > a figure{
+.portfolio .row > div figure{
   position: relative;
   overflow: hidden;
   border-radius: .5rem;
 }
-.portfolio .row > a figure::before{
-  content: '\F341';
-  font-family: "bootstrap-icons";
+.portfolio .row > div figure .resources_links{
   position: absolute;
-  font-size: 18px;
+  z-index: 200;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  color: var(--text-gold);
-  z-index: 6;
-  width: 50px;
-  height: 50px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}
+.portfolio .row > div figure .resources_links a{
+  background-color: var(--bg-main);
+  width: 45px;
+  height: 40px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 22%);
-  border-radius: 12px;
+  color: var(--text-gold-light);
+  transition: .4s;
   opacity: 0;
-  transition: .2s;
 }
-.portfolio .row > a:hover figure::before{
+.portfolio .row > div:hover figure .resources_links a{
   opacity: 1;
 }
-.portfolio .row > a figure::after{
+.portfolio .row > div figure::after{
   content: '';
   position: absolute;
   background-color: transparent;
@@ -388,19 +389,24 @@ aside{
   top: 0;
   transition: .4s;
 }
-.portfolio .row > a:hover figure::after{
+.portfolio .row > div:hover figure::after{
   background-color: hsla(0, 0%, 0%, 0.5);
 }
-.portfolio .row > a img{
+.portfolio .row > div img{
   transition: transform .4s;
 }
-.portfolio .row > a:hover img{
+@media (min-width:768px) {
+  .portfolio .row > div img{
+    height: 150px;
+  }
+}
+.portfolio .row > div:hover img{
   transform: scale(1.1);
 }
-.portfolio .row > a h6{
+.portfolio .row > div h6{
   margin-bottom: 5px;
 }
-.portfolio .row > a p{
+.portfolio .row > div p{
   color: var(--text-gray-70);
   font-size: 14px;
   font-weight: 500;
