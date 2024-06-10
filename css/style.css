@@ -401,11 +401,6 @@ aside{
 .portfolio .row > div img{
   transition: transform .4s;
 }
-@media (min-width:768px) {
-  .portfolio .row > div img{
-    height: 150px;
-  }
-}
 .portfolio .row > div:hover img{
   transform: scale(1.1);
 }
