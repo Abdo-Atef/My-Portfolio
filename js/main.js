@@ -75,7 +75,7 @@ const ProjectsData = [
   {
     name: "AbdoFolio",
     lang: "HTML, CSS",
-    imgSrc: "assets/Abdofolio.webp",
+    imgSrc: "assets/AbdoFolio.webp",
     codeSrc: "https://github.com/Abdo-Atef/AbdoFolio",
     hostSrc: "https://abdo-atef.github.io/AbdoFolio/",
   },
