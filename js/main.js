@@ -23,12 +23,29 @@ const showContactsToggleIcon = document.querySelector(
 
 contactsToggle.addEventListener("click", () => {
   aside.classList.toggle("active");
-  contactDetails.classList.toggle("opacity-100");
+  $(".contactDetails").slideToggle();
   showContactsToggleIcon.classList.toggle("fa-angle-up");
 });
 
+
 const projectsCo = document.getElementById("projectsCo");
 const ProjectsData = [
+  {
+    name: "KinderLink Dashboard",
+    lang: "React js",
+    imgSrc: "assets/kinderLink_Dashboard.png",
+    codeSrc: "https://github.com/Abdo-Atef/Daycare-dashboard",
+    benaceSrc: "https://www.behance.net/gallery/202417727/Kinder-Link-Dashboard",
+    youtubeSrc: "https://youtu.be/tWICZ91ybsw?si=Tk_jONNxOLTh1ypG",
+  },
+  {
+    name: "KinderLink App (Mobile App)",
+    lang: "React Native",
+    imgSrc: "assets/kinderLink_app.png",
+    codeSrc: "https://github.com/Abdo-Atef/Daycare-dashboard",
+    benaceSrc: "https://www.behance.net/gallery/202515891/Kinder-Link-Mobile-App",
+    youtubeSrc: "https://youtu.be/tWICZ91ybsw?si=Tk_jONNxOLTh1ypG",
+  },
   {
     name: "Exclusive E-commerce",
     lang: "React js",
@@ -40,9 +57,15 @@ const ProjectsData = [
     name: "Pharmacy management system",
     lang: "React js",
     imgSrc: "assets/Pharmacy.webp",
-    codeSrc:
-      "https://github.com/Abdo-Atef/Pharmacy-inventory-management-system",
-    hostSrc: "https://www.youtube.com/watch?v=T1TxiPJPPQg",
+    codeSrc:"https://github.com/Abdo-Atef/Pharmacy-inventory-management-system",
+    youtubeSrc: "https://www.youtube.com/watch?v=T1TxiPJPPQg",
+  },
+  {
+    name: "Movix",
+    lang: "Next.js, Typescript, Tailwind",
+    imgSrc: "assets/movix.webp",
+    codeSrc: "https://github.com/Abdo-Atef/Movix",
+    hostSrc: "https://movix1.vercel.app/",
   },
   {
     name: "Induz",
@@ -59,19 +82,19 @@ const ProjectsData = [
     hostSrc: "",
   },
   {
+    name: "Hemma-Itqan",
+    lang: "HTML, CSS, JS",
+    imgSrc: "assets/hemma-itqan.webp",
+    hostSrc: "https://hemma-itqan.com/",
+  },
+  {
     name: "To-Do-List App",
     lang: "HTML, CSS, JS",
     imgSrc: "assets/Todo.webp",
     codeSrc: "https://github.com/Abdo-Atef/To-Do-List",
     hostSrc: "https://abdo-tech.me/To-Do-List/",
   },
-  {
-    name: "NFT_MarketPlace",
-    lang: "React Native",
-    imgSrc: "assets/NFT.webp",
-    codeSrc: "https://github.com/Abdo-Atef/NFT_MarketPlace",
-    hostSrc: "",
-  },
+
   {
     name: "AbdoFolio",
     lang: "HTML, CSS",
@@ -87,11 +110,18 @@ const ProjectsData = [
     hostSrc: "https://abdo-tech.me/Dashboard/",
   },
   {
-    name: "Weather App",
-    lang: "HTML, CSS, JS",
-    imgSrc: "assets/Weather.webp",
-    codeSrc: "https://github.com/Abdo-Atef/Weather-Project",
-    hostSrc: "https://abdo-atef.github.io/Weather-Project/",
+    name: "DevFolio",
+    lang: "HTML, CSS, Bootstrap",
+    imgSrc: "assets/DevFolio.webp",
+    codeSrc: "https://github.com/Abdo-Atef/DevFolio",
+    hostSrc: "https://abdo-tech.me/DevFolio/",
+  },
+  {
+    name: "Danials",
+    lang: "HTML, CSS, Bootstrap",
+    imgSrc: "assets/Danials.webp",
+    codeSrc: "https://github.com/Abdo-Atef/Danials",
+    hostSrc: "https://abdo-tech.me/Danials/",
   },
   {
     name: "Games Website",
@@ -101,13 +131,12 @@ const ProjectsData = [
     hostSrc: "https://abdo-tech.me/Game-oop/",
   },
   {
-    name: "Danials",
-    lang: "HTML, CSS, Bootstrap",
-    imgSrc: "assets/Danials.webp",
-    codeSrc: "https://github.com/Abdo-Atef/Danials",
-    hostSrc: "https://abdo-tech.me/Danials/",
+    name: "Yummy",
+    lang: "HTML, CSS, JS",
+    imgSrc: "assets/yummy.webp",
+    codeSrc: "https://github.com/Abdo-Atef/Yummy",
+    hostSrc: "https://abdo-tech.me/Yummy/",
   },
-
   {
     name: "Quiz App",
     lang: "HTML, CSS, JS",
@@ -115,7 +144,6 @@ const ProjectsData = [
     codeSrc: "https://github.com/Abdo-Atef/Quiz-App",
     hostSrc: "https://abdo-tech.me/Quiz-App/",
   },
-
   {
     name: "Bookmark App",
     lang: "HTML, CSS, JS",
@@ -123,13 +151,18 @@ const ProjectsData = [
     codeSrc: "https://github.com/Abdo-Atef/Bookmark",
     hostSrc: "https://abdo-tech.me/Bookmark/",
   },
-
   {
-    name: "DevFolio",
-    lang: "HTML, CSS, Bootstrap",
-    imgSrc: "assets/DevFolio.webp",
-    codeSrc: "https://github.com/Abdo-Atef/DevFolio",
-    hostSrc: "https://abdo-tech.me/DevFolio/",
+    name: "Weather App",
+    lang: "HTML, CSS, JS",
+    imgSrc: "assets/Weather.webp",
+    codeSrc: "https://github.com/Abdo-Atef/Weather-Project",
+    hostSrc: "https://abdo-atef.github.io/Weather-Project/",
+  },
+  {
+    name: "NFT_MarketPlace",
+    lang: "React Native",
+    imgSrc: "assets/NFT.webp",
+    codeSrc: "https://github.com/Abdo-Atef/NFT_MarketPlace",
   },
   {
     name: "Kasper",
@@ -157,18 +190,43 @@ projectsCo.innerHTML = `
             project.imgSrc
           }" class="w-100 rounded-3" lazy="loading" alt="${project.name}">
           <div class="resources_links">
+
             ${
               project.hostSrc
                 ? `
             <a href="${project.hostSrc}" target="_blank">
               <i class="bi bi-eye"></i>
-            </a>
-            `
+            </a> `
                 : ""
             }
+              
+            ${
+              project.codeSrc
+                ? `
             <a href="${project.codeSrc}" target="_blank">
               <i class="bi bi-code-slash"></i>
-            </a>
+            </a>`
+                : ""
+            }
+              
+            ${
+              project.youtubeSrc
+                ? `
+            <a href="${project.youtubeSrc}" target="_blank">
+              <i class='bx bxl-youtube fs-5'></i>
+            </a>`
+                : ""
+            }
+
+            ${
+              project.benaceSrc
+                ? `
+            <a href="${project.benaceSrc}" target="_blank">
+              <i class='bx bx-image fs-5' ></i>
+            </a>`
+                : ""
+            }
+                
           </div>
         </figure>
         <h6>${project.name}</h6>
@@ -178,20 +236,6 @@ projectsCo.innerHTML = `
   ).join("")}
 
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load("particles-js", "assets/particles.json", function () {
