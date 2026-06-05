@@ -68,6 +68,24 @@ const ProjectsData = [
     hostSrc: "https://movix1.vercel.app/",
   },
   {
+    name: "lott ag",
+    lang: "Next.js, Typescript, Tailwind",
+    imgSrc: "assets/lott_ag.jpeg",
+    hostSrc: "https://lott-ag-website.vercel.app/",
+  },
+  {
+    name: "makamarble",
+    lang: "Next.js, Typescript, Tailwind",
+    imgSrc: "assets/makamarble.jpeg",
+    hostSrc: "https://maka-marble.vercel.app/",
+  },
+    {
+    name: "Hemma-Itqan",
+    lang: "Next.js, Typescript, Tailwind",
+    imgSrc: "assets/hemma-itqan.webp",
+    hostSrc: "https://hemma-itqan.com/",
+  },
+  {
     name: "Induz",
     lang: "React js, Tailwind",
     imgSrc: "assets/Induz.webp",
@@ -79,12 +97,6 @@ const ProjectsData = [
     lang: "React Native",
     imgSrc: "assets/Notion.webp",
     codeSrc: "https://github.com/Abdo-Atef/Notion",
-  },
-  {
-    name: "Hemma-Itqan",
-    lang: "HTML, CSS, JS",
-    imgSrc: "assets/hemma-itqan.webp",
-    hostSrc: "https://hemma-itqan.com/",
   },
   {
     name: "To-Do-List App",
