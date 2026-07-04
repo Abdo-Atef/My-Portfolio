@@ -408,6 +408,17 @@ aside {
   background: var(--text-gold);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--border-color);
+  z-index: 2;
+}
+
+.Resume .experience .info:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 24px;
+    width: 1px;
+    height: calc(100% + 55px);
+    background: var(--border-color);
 }
 
 .Resume .mySkills .SkilsIcons {
@@ -435,10 +446,31 @@ aside {
 }
 
 /* --------------------- Portfolio ------------------------ */
+.portfolio .row>div {
+  margin-bottom: 20px;
+}
+
+.portfolio .row>div .project-card {
+  height: 100%;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  transition: transform .3s ease, border-color .3s ease, background-color .3s ease;
+}
+
+.portfolio .row>div:hover .project-card {
+  transform: translateY(-4px);
+  border-color: rgba(254, 184, 36, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .portfolio .row>div figure {
   position: relative;
   overflow: hidden;
-  border-radius: .5rem;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
 
 .portfolio .row>div figure .resources_links {
@@ -494,12 +526,36 @@ aside {
 
 .portfolio .row>div h6 {
   margin-bottom: 5px;
+  color: var(--text-white);
+}
+
+.portfolio .row>div .project-info {
+  padding: 2px 2px 4px;
 }
 
 .portfolio .row>div p {
   color: var(--text-gray-70);
   font-size: 14px;
   font-weight: 500;
+  margin-bottom: 0;
+}
+
+.project-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.portfolio .row>div .project-date {
+  color: #c9c9c9;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+
+.portfolio .row>div .project-date i {
+  font-size: 12px;
 }
 
 /* ------------------------- Contact ------------------------ */
@@ -525,4 +581,13 @@ aside {
 .contact .contact-form textarea:focus {
   outline: 0;
   border: 1px solid var(--text-gold-light);
+}
+.filter-select {
+    border: 1px solid var(--border-color);
+    padding: 7px 7px;
+    border-radius: 8px;
+    color: white;
+    outline: 0;
+    min-width: 220px;
+    cursor: pointer;
 }

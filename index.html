@@ -127,7 +127,7 @@
         <div class="experience-section d-flex justify-content-evenly flex-wrap my-5">
           <div class="d-flex align-items-center gap-3 bgSecondary p-3 rounded-4">
             <figure>
-              <img src="assets/icon-experience.webp" alt="experience icon" width="40" height="100%">
+              <img src="assets/icons/icon-experience.webp" alt="experience icon" width="40" height="100%">
             </figure>
             <div class="text">
               <h3 class="h4 fw-bold fc-white mb-0">+2</h3>
@@ -136,16 +136,16 @@
           </div>
           <div class="d-flex align-items-center gap-3 bgSecondary p-3 rounded-4">
             <figure>
-              <img src="assets/icon-projects.webp" alt="projects icon" width="40" height="100%">
+              <img src="assets/icons/icon-projects.webp" alt="projects icon" width="40" height="100%">
             </figure>
             <div class="text">
-              <h3 class="h4 fw-bold fc-white mb-0">+20</h3>
+              <h3 class="h4 fw-bold fc-white mb-0">+27</h3>
               <p>Projects Completed</p>
             </div>
           </div>
           <div class="d-flex align-items-center gap-3 bgSecondary p-3 rounded-4">
             <figure>
-              <img src="assets/icon-courses.webp" alt="courses icon" width="40" height="100%">
+              <img src="assets/icons/icon-courses.webp" alt="courses icon" width="40" height="100%">
             </figure>
             <div class="text">
               <h3 class="h4 fw-bold fc-white mb-0">+5</h3>
@@ -154,7 +154,7 @@
           </div>
           <div class="d-flex align-items-center gap-3 bgSecondary p-3 rounded-4">
             <figure>
-              <img src="assets/icon-awards.webp" alt="awards icon" width="40" height="100%">
+              <img src="assets/icons/icon-awards.webp" alt="awards icon" width="40" height="100%">
             </figure>
             <div class="text">
               <h3 class="h4 fw-bold fc-white mb-0">+3</h3>
@@ -166,7 +166,7 @@
         <div class="whatIamDoing d-flex justify-content-evenly flex-wrap">
           <div class="d-flex align-items-center gap-3 bgSecondary p-3 rounded-4">
             <figure>
-              <img src="assets/icon-dev.svg" alt="experience icon" width="40" height="100%">
+              <img src="assets/icons/icon-dev.svg" alt="experience icon" width="40" height="100%">
             </figure>
             <div class="text">
               <h5 class="h6 fw-bold fc-white mb-1">Web Development</h5>
@@ -175,7 +175,7 @@
           </div>
           <div class="d-flex align-items-center gap-3 bgSecondary p-3 rounded-4">
             <figure>
-              <img src="assets/icon-design.svg" alt="projects icon" width="40" height="100%">
+              <img src="assets/icons/icon-design.svg" alt="projects icon" width="40" height="100%">
             </figure>
             <div class="text">
               <h5 class="h6 fw-bold fc-white mb-1">Web Design</h5>
@@ -202,6 +202,11 @@
           <div>
             <span class="briefcaseIcon"><i class="bi bi-briefcase"></i></span>
             <h4 class="d-inline-block mb-0">Experience</h4>
+          </div>
+          <div class="info mt-4 position-relative" style="padding-left: 57px;">
+            <h6 class="fw-bold">Frontend Developer (Next.js)</h6>
+            <span class="fc-gold d-block my-1">September, 2024 - June, 2025</span>
+            <p class="fc-gray mb-0 fs-15">Batsync (Full-Time)</p>
           </div>
           <div class="info mt-4 position-relative" style="padding-left: 57px;">
             <h6 class="fw-bold">Freelancer Frontend Developer</h6>
@@ -249,7 +254,7 @@
               <span>React.js</span>
             </div>
             <div>
-              <img src="assets/next-js.svg" style="width: 40px;" alt="next-js">
+              <img src="assets/icons/next-js.svg" style="width: 40px;" alt="next-js">
               <span>Next.js</span>
             </div>
             <div>
@@ -259,6 +264,26 @@
             <div>
               <i class='bx bxl-redux'></i>
               <span>Redux</span>
+            </div>
+            <div>
+              <i class='bx bxl-nodejs'></i>
+              <span>Node.js</span>
+            </div>
+            <div>
+              <img src="assets/icons/express.svg" style="width: 47px;" alt="express">
+              <span>Express.js</span>
+            </div>
+            <div>
+              <i class='bx bxl-mongodb'></i>
+              <span>MongoDB</span>
+            </div>
+            <div>
+              <img src="assets/icons/framermotion.svg" style="width: 38px;margin-bottom: 8px;" alt="framermotion">
+              <span>Framer Motion</span>
+            </div>
+            <div>
+              <img src="assets/icons/shadcnui.svg" style="width: 38px;margin-bottom: 8px;" alt="shadcnui">
+              <span>ShadCN UI</span>
             </div>
             <div>
               <i class='bx bxl-firebase'></i>
@@ -289,7 +314,17 @@
       </section>
       <section class="portfolio d-none ">
         <h2 class="mainAfterText fc-white position-relative">Projects</h2>
-        <div class="row-cols-md-2 row row-cols-lg-3 g-4 mt-5" id="projectsCo"></div>
+        <div class="mt-4 d-flex justify-content-end">
+          <select id="projectsFilter" class="filter-select bgSecondary">
+            <option value="all">All</option>
+            <option value="react.js">React.js</option>
+            <option value="next.js">Next.js</option>
+            <option value="react-native">React Native</option>
+            <option value="html-css-js">HTML/CSS/JS</option>
+            <option value="date">By Date</option>
+          </select>
+        </div>
+        <div class="row-cols-md-2 row row-cols-lg-3 g-4 mt-2" id="projectsCo"></div>
       </section>
       <section class="contact d-none">
         <h2 class="mainAfterText fc-white position-relative">Contact</h2>
@@ -326,6 +361,7 @@
   <div id="particles-js"></div>
   <script src="js/particles.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
 
